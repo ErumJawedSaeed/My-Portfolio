@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@banner image{
+  body{
+    .portfolio-container {
+      position :relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .portfolio-image {
+      width: 100%; 
+      height: auto;
+    }
+    
+    .portfolio-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+  }
+}
+
+@layer base {
+  body {
+    color: #140707fd;
+    background-color:rgb(248, 242, 242) ;
+  }
+}
+
+@layer components {
+  .menulink {
+    @apply cursor-pointer hover:text-[#f1ebeb]
+  }
+  .tags{
+    background-color: rgb(15, 15, 15);
+    margin-right: 0.2rem;
+    margin-top:0.2rem;
+    padding :2px 8px;
+    display: inline-flex;
+    color: rgb(244, 246, 248);
+    font-size: large;
+  }
+  .price-tag{
+    background-color: rgb(233, 225, 225);
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .tags:last-child {
+     margin-right: 0;
+  }
+  .tags:nth-child(0){
+    background-color: black;
+  }
+}
